@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Juego del Número Secreto</title>
+</head>
+<body>
+  <h1>Adivina el número secreto</h1>
+
+  <input type="number" id="inputNumSecreto" placeholder="Ingresa un número">
+  <button onclick="generacionNumSecreto()">Intentar</button>
+
+  <p id="resultado"></p>
+
+  <script>
+    // Número secreto generado una sola vez
+    const numSecreto = 28;
+
+    function generacionNumSecreto() {
+      let input = document.getElementById("inputNumSecreto").value;
+      let resultado = document.getElementById("resultado");
+
+      const guess = Number(input);
+
+      if (guess === numSecreto) {
+        resultado.textContent = "¡Acertaste!";
+      } else {
+        resultado.textContent = "Ups, el número secreto es incorrecto, vuelve a intentarlo";
+      }
+    }
+  </script>
+</body>
+</html>
