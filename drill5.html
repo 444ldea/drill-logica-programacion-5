@@ -13,7 +13,7 @@
   <p id="resultado"></p>
 
   <script>
-    // Número secreto generado una sola vez
+
     const numSecreto = 28;
 
     function generacionNumSecreto() {
@@ -23,7 +23,7 @@
       const guess = Number(input);
 
       if (guess === numSecreto) {
-        resultado.textContent = "¡Acertaste!";
+        resultado.textContent = "¡Acertaste, era tu cumpleaños!";
       } else {
         resultado.textContent = "Ups, el número secreto es incorrecto, vuelve a intentarlo";
       }
